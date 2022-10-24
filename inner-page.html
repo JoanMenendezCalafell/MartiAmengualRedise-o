@@ -43,8 +43,8 @@
   <div id="topbar" class="d-flex align-items-center fixed-top">
     <div class="container d-flex justify-content-between">
       <div class="contact-info d-flex align-items-center">
-        <i class="bi bi-envelope"></i> <a href="mailto:contact@example.com">contact@example.com</a>
-        <i class="bi bi-phone"></i> +1 5589 55488 55
+        <i class="bi bi-envelope"></i> <a href="mailto:contact@example.com">martiamengual@gmail.com</a>
+        <i class="bi bi-phone"></i> +34 912 913 753
       </div>
       <div class="d-none d-lg-flex social-links align-items-center">
         <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
@@ -59,40 +59,18 @@
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo me-auto"><a href="index.html">Medilab</a></h1>
+      <h1 class="logo me-auto"><a href="index.html">Marti Amengual Técnica Industrial</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-          <li><a class="nav-link scrollto " href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">About</a></li>
-          <li><a class="nav-link scrollto" href="#services">Services</a></li>
-          <li><a class="nav-link scrollto" href="#departments">Departments</a></li>
-          <li><a class="nav-link scrollto" href="#doctors">Doctors</a></li>
-          <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Drop Down 2</a></li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
-            </ul>
-          </li>
-          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+          <li><a class="nav-link scrollto active" href="./index.html">Solicitar Cita</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 
-      <a href="#appointment" class="appointment-btn scrollto"><span class="d-none d-md-inline">Make an</span> Appointment</a>
+      <a href="./inner-page.html" class="appointment-btn scrollto"><span class="d-none d-md-inline">Solicitar una</span> Cita</a>
 
     </div>
   </header><!-- End Header -->
@@ -100,27 +78,71 @@
   <main id="main">
 
     <!-- ======= Breadcrumbs Section ======= -->
-    <section class="breadcrumbs">
+    <section id="appointment" class="appointment section-bg">
       <div class="container">
 
-        <div class="d-flex justify-content-between align-items-center">
-          <h2>Inner Page</h2>
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li>Inner Page</li>
-          </ol>
+        <div class="section-title">
+          <br>
+          <br><br><br>
+          <h2>Solicitar una Cita</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
         </div>
 
-      </div>
-    </section><!-- End Breadcrumbs Section -->
+        <form action="forms/appointment.php" method="post" role="form" class="php-email-form">
+          <div class="row">
+            <div class="col-md-4 form-group">
+              <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+              <div class="validate"></div>
+            </div>
+            <div class="col-md-4 form-group mt-3 mt-md-0">
+              <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email">
+              <div class="validate"></div>
+            </div>
+            <div class="col-md-4 form-group mt-3 mt-md-0">
+              <input type="tel" class="form-control" name="phone" id="phone" placeholder="Your Phone" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+              <div class="validate"></div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4 form-group mt-3">
+              <input type="datetime" name="date" class="form-control datepicker" id="date" placeholder="Appointment Date" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+              <div class="validate"></div>
+            </div>
+            <div class="col-md-4 form-group mt-3">
+              <select name="department" id="department" class="form-select">
+                <option value="">Select Department</option>
+                <option value="Department 1">Department 1</option>
+                <option value="Department 2">Department 2</option>
+                <option value="Department 3">Department 3</option>
+              </select>
+              <div class="validate"></div>
+            </div>
+            <div class="col-md-4 form-group mt-3">
+              <select name="doctor" id="doctor" class="form-select">
+                <option value="">Select Doctor</option>
+                <option value="Doctor 1">Doctor 1</option>
+                <option value="Doctor 2">Doctor 2</option>
+                <option value="Doctor 3">Doctor 3</option>
+              </select>
+              <div class="validate"></div>
+            </div>
+          </div>
 
-    <section class="inner-page">
-      <div class="container">
-        <p>
-          Example inner page template
-        </p>
-      </div>
-    </section>
+          <div class="form-group mt-3">
+            <textarea class="form-control" name="message" rows="5" placeholder="Message (Optional)"></textarea>
+            <div class="validate"></div>
+          </div>
+          <div class="mb-3">
+            <div class="loading">Loading</div>
+            <div class="error-message"></div>
+            <div class="sent-message">Your appointment request has been sent successfully. Thank you!</div>
+          </div>
+          <div class="text-center"><button type="submit">Solicitar una Cita</button></div>
+        </form>
+
+      </div><!-- End Breadcrumbs Section -->
+
+  
 
   </main><!-- End #main -->
 
